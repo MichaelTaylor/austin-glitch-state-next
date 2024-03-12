@@ -1,0 +1,39 @@
+import React from "react";
+import NextEventContainer from "./NextEventContainer";
+
+const NextEvent: React.FC = () => {
+  const currentDate = new Date();
+  const nextDate = new Date();
+
+    enum Months {
+    January = 0,
+    February,
+    March,
+    April,
+    May,
+    June,
+    July,
+    August,
+    September,
+    October,
+    November,
+    December
+    }
+
+  //year, month, day
+  nextDate.setFullYear(2024, Months.April, 25);
+
+  return (
+    <div className="flex justify-center items-center font-custom">
+      <div className="inline-block text-current border-4 border-current p-12 w-2/5">
+        {currentDate <= nextDate ? (
+          <NextEventContainer eventDate={nextDate} />
+        ) : (
+          <NextEventContainer eventDate={null} />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default NextEvent;
