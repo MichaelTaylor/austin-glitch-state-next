@@ -1,14 +1,6 @@
-interface FAQDetail {
-  question: string;
-  answer: string;
-}
+import { FAQCollection } from "@/types/faq-types";
 
-export interface FAQ {
-  header: string;
-  details: FAQDetail[];
-}
-
-export const FAQ: FAQ[] = [
+export const FAQ: FAQCollection[] = [
   {
     header: `Basic Questions`,
     details: [

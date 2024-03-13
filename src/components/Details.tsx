@@ -1,14 +1,14 @@
 import React, { ReactNode } from "react";
 import DetailBlock from "@/components/DetailBlock"
 import { FAQ } from "@/components/data/FAQ";
+import { FAQCollection } from "../types/faq-types";
 
 import Card from "@/components/Card"
 import NextEvent from "@/components/NextEvent";
-//import LandingPage from "../Landing Page/LandingPage";
-//import MailchimpSignupForm from "../Email Signup/MailchimpSignupForm";
+
 
 const Details: React.FC = () => {
-  const faqList: ReactNode = FAQ.map((QnA: FAQ, index: number) => (
+  const faqList: ReactNode = FAQ.map((QnA: FAQCollection, index: number) => (
     <DetailBlock key={index} header={QnA.header} details={QnA.details} />
   ));
 
