@@ -1,16 +1,10 @@
 import Details from '@/components/details/Details';
-import Footer from '@/components/Footer';
-import Header from '@/components/Header';
 import LandingPage from '@/components/LandingPage';
 import NextEvent from '@/components/next-event/NextEvent';
 import MailchimpSignupForm from '@/components/MailchimpSignup';
-import React, { ReactNode } from 'react'
+import React from 'react'
 
-interface HomeProps {
-  children?: ReactNode;
-}
-
-const Home: React.FC<HomeProps> = ({ children }) => {
+const Home: React.FC = () => {
   return (
     <main>
       <div>
