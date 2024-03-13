@@ -28,7 +28,7 @@ export function useEmailSubscribe(): UseEmailSubscribe {
       return;
     }
 
-    axios.post('/api/EmailSignup', {
+    axios.post('/api/email-subscribe', {
       email,
       firstName,
     }, {
