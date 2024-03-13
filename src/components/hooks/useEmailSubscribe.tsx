@@ -37,9 +37,6 @@ export function useEmailSubscribe(): UseEmailSubscribe {
       },
     }).then((response) => {
       console.log(response);
-      if (response.data.title === 'Member Exists') {
-        alert('You are already subscribed');
-      }
     }).catch((error) => {
       console.error(error);
     });
