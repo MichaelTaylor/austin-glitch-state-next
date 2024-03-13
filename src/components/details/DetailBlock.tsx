@@ -1,5 +1,5 @@
 import React from "react";
-import QuestionAnswer from "@/components/QuestionAnswer"
+import QuestionAnswer from "@/components/details/QuestionAnswer"
 
 //todo rename these details -> detailBlock -> questionAnswer
 

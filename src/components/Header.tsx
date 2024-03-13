@@ -13,7 +13,7 @@ const Header: React.FC = () => {
 
   return (
     <div className="relative z-10 font-custom">
-      <Link href="/" className="flex justify-center items-center text-none text-current font-bold text-6xl hover:underline">
+      <Link href="/" className="flex justify-center items-center text-none text-current font-bold text-5xl xl:text-6xl hover:underline">
         Austin Glitch State
       </Link>
       <ul className="flex justify-evenly items-center text-none text-current text-4xl">

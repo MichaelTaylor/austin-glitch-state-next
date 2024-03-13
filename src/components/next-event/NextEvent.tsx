@@ -24,8 +24,8 @@ const NextEvent: React.FC = () => {
   nextDate.setFullYear(2024, Months.April, 25);
 
   return (
-    <div className="flex justify-center items-center font-custom">
-      <div className="inline-block text-current border-4 border-current p-12 w-2/5">
+    <div className="flex justify-center items-center font-custom my-10">
+      <div className="inline-block text-current border-4 border-current p-12 w-3/5 xl:w-2/5">
         {currentDate <= nextDate ? (
           <NextEventContainer eventDate={nextDate} />
         ) : (

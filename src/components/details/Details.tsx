@@ -1,10 +1,9 @@
 import React, { ReactNode } from "react";
-import DetailBlock from "@/components/DetailBlock"
+import DetailBlock from "@/components/details/DetailBlock"
 import { FAQ } from "@/components/data/FAQ";
-import { FAQCollection } from "../types/faq-types";
+import { FAQCollection } from "../../types/faq-types";
 
-import Card from "@/components/Card"
-import NextEvent from "@/components/NextEvent";
+import Card from "@/components/reusable-components/Card"
 
 
 const Details: React.FC = () => {
@@ -12,13 +11,15 @@ const Details: React.FC = () => {
     <DetailBlock key={index} header={QnA.header} details={QnA.details} />
   ));
 
+  const detailStyle = `flex flex-col mx-auto max-w-5xl text-center 
+  mt-2 pb-18 bg-background text-text-color`
+
   return (
     <React.Fragment>
-      {/*<LandingPage />*/}
       <Card className="mt-16">
-        <NextEvent />
-        {/*<MailchimpSignupForm />*/}
-        <div className="flex flex-col mx-auto max-w-5xl text-center mt-2 pb-18 bg-background text-text-color">{faqList}</div>
+        <div className={detailStyle}>
+          {faqList}
+        </div>
       </Card>
     </React.Fragment>
   );

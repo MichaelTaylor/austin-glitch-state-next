@@ -1,44 +1,11 @@
 "use client"
 
-import React, { useState, FormEvent, ChangeEvent } from "react";
-import axios from "axios";
+import React, { ChangeEvent } from "react";
+import { useEmailSubscribe } from "./hooks/useEmailSubscribe";
 
 const MailchimpSignupForm: React.FC = () => {
-  const [email, setEmail] = useState<string>("");
-  const [firstName, setFirstName] = useState<string>("");
-  const [submitted, setSubmitted] = useState<boolean>(false);
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
-    if (email === '' || firstName === '') {
-      alert('Please fill in all fields');
-      return;
-    }
-
-    if (!email.includes('@')) {
-      alert('Please enter a valid email');
-      return;
-    }
-
-    axios.post('/api/EmailSignup', {
-      email,
-      firstName,
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then((response) => {
-      console.log(response);
-      if (response.data.title === 'Member Exists') {
-        alert('You are already subscribed');
-      }
-    }).catch((error) => {
-      console.error(error);
-    });
-
-    setSubmitted(true);
-  };
+  const { email, setEmail, firstName, 
+    setFirstName, submitted, handleSubmit } = useEmailSubscribe();
 
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -48,11 +15,14 @@ const MailchimpSignupForm: React.FC = () => {
     setFirstName(e.target.value);
   };
 
-  const formBoxStyle = "w-2/6 mx-auto border-4 border-text-color font-custom"
-  const headerStyle = "text-center bg-primary text-text-color p-5 text-5xl underline"
-  const formStyle = "flex flex-col m-auto max-w-lg py-4 items-center w-2/5"
-  const inputStyle = "w-auto p-5 my-1 block bg-primary border-4 border-text-color text-3xl placeholder-text-color"
-  const buttonStyle = "w-full p-5 my-1 block bg-primary border-4 border-text-color text-3xl placeholder-text-color mt-10 rounded-3xl"
+  const formBoxStyle = `w-4/6 xl:w-1/2 mx-auto border-4 border-text-color font-custom`
+  const headerStyle = `text-center bg-primary text-text-color p-5 text-5xl underline`
+  const formStyle = `flex flex-col w-4/5 mx-auto max-w-lg py-4 items-center w-2/5`
+  const inputStyle = `w-full p-5 my-1 block bg-primary border-4 border-text-color 
+  text-3xl placeholder-text-color`
+  const buttonStyle = `w-full p-5 my-1 block bg-primary border-4 border-text-color 
+  text-3xl placeholder-text-color mt-10 rounded-3xl hover:bg-text-color hover:text-primary
+  trnsition duration-100 ease-in-out transform hover:scale-105`
 
   const unsubmittedForm = (
     <div>
@@ -63,7 +33,7 @@ const MailchimpSignupForm: React.FC = () => {
           type="email"
           name="email"
           id="email"
-          placeholder="Enter your email"
+          placeholder="Email"
           value={email}
           onChange={handleEmailChange}
         />
@@ -72,7 +42,7 @@ const MailchimpSignupForm: React.FC = () => {
           type="text"
           name="firstName"
           id="first-name"
-          placeholder="Enter your first name"
+          placeholder="First Name"
           value={firstName}
           onChange={handleFirstNameChange}
         />

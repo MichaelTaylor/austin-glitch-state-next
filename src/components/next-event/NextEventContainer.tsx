@@ -1,5 +1,4 @@
 import React from "react";
-import Style from "./NextEventContainer.module.css"; //todo change to tailwind
 
 interface NextEventContainerProps {
   eventDate: Date | null;
@@ -48,7 +47,7 @@ const NextEventContainer: React.FC<NextEventContainerProps> = ({ eventDate }) =>
 
  return (
     <React.Fragment>
-      <div className="text-center underline xl:text-7xl sm:text-3xl xs:text-2xl">
+      <div className="text-center underline text-4xl sm:text-6xl">
         Next Meeting
         <br />
         {eventDate != null ? (
@@ -67,7 +66,7 @@ const NextEventContainer: React.FC<NextEventContainerProps> = ({ eventDate }) =>
       </div>
 
       {eventDate != null && (
-        <div className="xl:text-5xl sm:text-3xl xs:text-2xl">
+        <div className="text-3xl sm:text-5xl">
           <br />
           <h4>Game Worlds Facility</h4>
           <br />
