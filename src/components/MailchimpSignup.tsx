@@ -3,6 +3,8 @@
 import React, { ChangeEvent } from "react";
 import { useEmailSubscribe } from "./hooks/useEmailSubscribe";
 
+import Button from "./reusable-components/Button";
+
 const MailchimpSignupForm: React.FC = () => {
   const { email, setEmail, firstName, 
     setFirstName, submitted, handleSubmit } = useEmailSubscribe();
@@ -20,9 +22,6 @@ const MailchimpSignupForm: React.FC = () => {
   const formStyle = `flex flex-col w-4/5 mx-auto max-w-lg py-4 items-center w-2/5`
   const inputStyle = `w-full p-5 my-1 block bg-primary border-4 border-text-color 
   text-3xl placeholder-text-color`
-  const buttonStyle = `w-full p-5 my-1 block bg-primary border-4 border-text-color 
-  text-3xl placeholder-text-color mt-10 rounded-3xl hover:bg-text-color hover:text-primary
-  trnsition duration-100 ease-in-out transform hover:scale-105`
 
   const unsubmittedForm = (
     <div>
@@ -46,9 +45,7 @@ const MailchimpSignupForm: React.FC = () => {
           value={firstName}
           onChange={handleFirstNameChange}
         />
-        <button className={buttonStyle} type="submit">
-          Subscribe
-        </button>
+        <Button className="w-full" buttonText="Subscribe" type="submit" />
       </form>
     </div>
   );

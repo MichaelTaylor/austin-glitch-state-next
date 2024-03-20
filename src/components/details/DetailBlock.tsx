@@ -1,8 +1,6 @@
 import React from "react";
 import QuestionAnswer from "@/components/details/QuestionAnswer"
 
-//todo rename these details -> detailBlock -> questionAnswer
-
 interface DetailBlockProps {
   header: string;
   details: { question: string; answer: string }[];

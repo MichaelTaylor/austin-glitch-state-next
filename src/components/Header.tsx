@@ -9,7 +9,7 @@ const Header: React.FC = () => {
     window.open("http://eepurl.com/igmoU1");
   };
 
-  const listClass = "list-none text-none cursor-pointer hover:border-b-4 border-current"
+  const listClass : string = "list-none text-none cursor-pointer hover:border-b-4 border-current"
 
   return (
     <div className="relative z-10 font-custom">
