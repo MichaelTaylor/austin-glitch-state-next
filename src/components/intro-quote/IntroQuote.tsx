@@ -2,7 +2,7 @@
 
 import React from 'react'
 import {motion} from 'framer-motion'
-import Border from './reusable-components/Border'
+import Border from '../shared/reusable-components/Border'
 
 const IntroQuote = () => {
 

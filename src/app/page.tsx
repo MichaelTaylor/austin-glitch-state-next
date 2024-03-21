@@ -1,12 +1,12 @@
 import React from 'react'
 
-import LandingPage from '@/components/LandingPage';
-import IntroQuote from '@/components/IntroQuote';
+import LandingPage from '@/components/landing-page/LandingPage';
+import IntroQuote from '@/components/intro-quote/IntroQuote';
 import ImageGallery from '@/components/image-gallery/ImageGallery';
-import AGSPitch from '@/components/AGSPitch';
-import TestimonialsList from '@/components/TestimonialsList';
+import AGSPitch from '@/components/ags-pitch/AGSPitch';
+import TestimonialsList from '@/components/testimonial-list/TestimonialsList';
 import NextEvent from '@/components/next-event/NextEvent';
-import MailchimpSignupForm from '@/components/MailchimpSignup';
+import MailchimpSignupForm from '@/components/mailchimp-signup/MailchimpSignup';
 import Details from '@/components/details/Details';
 
 const Home: React.FC = () => {

@@ -1,9 +1,9 @@
 "use client"
 
 import React, { ChangeEvent } from "react";
-import { useEmailSubscribe } from "./hooks/useEmailSubscribe";
+import { useEmailSubscribe } from "../shared/hooks/useEmailSubscribe";
 
-import Button from "./reusable-components/Button";
+import Button from "../shared/reusable-components/Button";
 
 const MailchimpSignupForm: React.FC = () => {
   const { email, setEmail, firstName, 

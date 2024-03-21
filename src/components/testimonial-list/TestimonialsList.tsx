@@ -1,6 +1,6 @@
 import React from 'react'
-import { Testimonials } from './data/Testimonials'
-import Border from './reusable-components/Border'
+import { Testimonials } from '../data/Testimonials'
+import Border from '../shared/reusable-components/Border'
 
 const TestimonialsList = () => {
 

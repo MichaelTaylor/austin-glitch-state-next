@@ -2,8 +2,8 @@
 
 import React from 'react'
 import {useRouter} from 'next/navigation'
-import Button from './reusable-components/Button'
-import Border from './reusable-components/Border'
+import Button from '../shared/reusable-components/Button'
+import Border from '../shared/reusable-components/Border'
 
 const AGSPitch = () => {
 

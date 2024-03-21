@@ -5,7 +5,7 @@ import {Images} from '../data/AGSPhotos'
 import Image from 'next/image';
 
 import {motion} from 'framer-motion'
-import Border from '../reusable-components/Border';
+import Border from '../shared/reusable-components/Border';
 
 const ImageGallery = () => {
 
@@ -18,8 +18,7 @@ const ImageGallery = () => {
 
   return (
     <div className='flex flex-col items-center justify-center'>
-    <motion.div initial={{opacity: 0}} whileInView={{ opacity: 1,}}
-  viewport={{ once: true }}  className='grid grid-cols-1 lg:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 gap-4'>
+    <motion.div initial={{opacity: 0}} animate={{ opacity: 1,}} className='grid grid-cols-1 lg:grid-cols-2 xl:grid-rows-2 xl:grid-cols-3 gap-4'>
         {imageList}
     </motion.div>
     <Border />

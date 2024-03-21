@@ -3,7 +3,7 @@ import DetailBlock from "@/components/details/DetailBlock"
 import { FAQ } from "@/components/data/FAQ";
 import { FAQCollection } from "../../types/faq-types";
 
-import Card from "@/components/reusable-components/Card"
+import Card from "@/components/shared/reusable-components/Card"
 
 
 const Details: React.FC = () => {
