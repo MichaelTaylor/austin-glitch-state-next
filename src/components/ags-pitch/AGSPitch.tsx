@@ -1,11 +1,24 @@
 "use client"
 
-import React from 'react'
+import React, {useEffect, useRef} from 'react'
 import {useRouter} from 'next/navigation'
 import Button from '../shared/reusable-components/Button'
 import Border from '../shared/reusable-components/Border'
 
+import {motion, useInView, useAnimation} from 'framer-motion'
+
 const AGSPitch = () => {
+
+    const ref = useRef(null)
+    const isInView = useInView(ref, {once: true})
+    const mainControls = useAnimation()
+
+    useEffect(() => {
+        if(isInView){
+            mainControls.start("visible")
+        }
+    }
+    , [isInView, mainControls])
 
     const router = useRouter()
 
@@ -19,15 +32,19 @@ on their games in a chill and free flowing setting.`
     const submitGame = () => {
         router.push('/signup')
     }
-
+//todo make hook for useAnimation
   return (
-    <div className='font-custom'>
-        <h1 className='w-4/5 xl:w-3/5  mx-auto text-3xl xl:text-5xl'>
+    <div ref={ref} className='font-custom'>
+        <motion.h1 variants={{hidden: {opacity:0}, visible: {opacity: 1}}} 
+        initial="hidden" 
+        animate={mainControls} 
+        transition={{duration: 1, delay: 0.5}}
+        className='w-4/5 xl:w-3/5  mx-auto text-3xl xl:text-5xl'>
             {pitch}
-        </h1>
-        <h1 className='w-4/5 xl:w-3/5 text-center mx-auto mb-20 mt-36 text-4xl xl:text-6xl'>
+        </motion.h1>
+        <motion.h1 initial={{opacity: 0}} animate={{opacity:1}} className='w-4/5 xl:w-3/5 text-center mx-auto mb-20 mt-36 text-4xl xl:text-6xl'>
             {callToAction}
-        </h1>
+        </motion.h1>
         <Button className='border-8 xl:w-1/4 h-48 xl:text-7xl' buttonText='Submit Game' onclick={submitGame}/>
         <Border/>
     </div>

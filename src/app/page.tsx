@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <IntroQuote/>
         <ImageGallery/>
         <AGSPitch/>
-        <TestimonialsList/>
+        {/*<TestimonialsList/>*/}
         <NextEvent />
         <MailchimpSignupForm/>
         <Details/>
