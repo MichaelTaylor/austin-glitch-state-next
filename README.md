@@ -1,4 +1,4 @@
-<h1>One Era</h1>
+<h1>Austin Glitch State</h1>
 <p>Where local developers can meet and get feedback on their projects before they show it to players</p>
 <h2>Features</h2>
 <ul>
