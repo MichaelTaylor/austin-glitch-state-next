@@ -21,7 +21,7 @@ const NextEvent: React.FC = () => {
     }
 
   //year, month, day
-  nextDate.setFullYear(2025, Months.April, 16);
+  nextDate.setFullYear(2025, Months.May, 29);
 
   return (
     <div className="flex justify-center items-center font-custom my-10">
