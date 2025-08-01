@@ -26,7 +26,7 @@ const NextEventContainer: React.FC<NextEventContainerProps> = ({ eventDate }) =>
     if (eventDate) {
       const eventDay = eventDate.getDate();
       const index = eventDay < 10 ? 0 : 1;
-
+      
       if (eventDay < 10 || eventDay > 13) {
         const dayString = eventDay.toString();
         if (dayString[index] === "1") {
