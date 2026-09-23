@@ -32,6 +32,10 @@ export const FAQ: FAQCollection[] = [
     with basic info about your game.`,
       },
       {
+        question: "Can I use AI?",
+        answer: `You can but be truthful about it (see sign up form).`,
+      },
+      {
         question: "How are games chosen?",
         answer: `Because of the limited time we have, only a few games are accepted.
             If your game is not chosen it'll be moved to the next meeting`,
